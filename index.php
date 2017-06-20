@@ -6,11 +6,11 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script>
 	$(document).ready(function(){
+		// Creating an Ajax Call on Click of Submit Button
 		$("#btn_submit").click(function(){
 			$.get("post_image.php?quote="+$("#quote").val(), function(data){
-			
-            alert(data.message);	
-		});
+				$("#result").text(data.message);	// It will show the result in an alert
+			});
 		});
 	});
 	</script>
@@ -26,7 +26,7 @@
 				<input type="submit" id="btn_submit" class="w3-button w3-grey w3-hover-green w3-round"/>
 		</div>
 		</div>
-		<h3 style="color:#FFFFFF"></h3>
+		<h3 style="color:#FFFFFF" id="result"></h3> <!-- The result will be shown here -->
 				</center>
 	</div>
 </body>
