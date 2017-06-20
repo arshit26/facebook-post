@@ -1,2 +1,2 @@
 # facebook-post
-<p style='color:red'>This is some red text.</p>
+<p style='color:#0000ff'>This is some red text.</p>
