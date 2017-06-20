@@ -1,10 +1,10 @@
 # facebook-post
 ## index.php
-It is the view part.
-It conatins the UI parts to which the user interacts.
-It accepts a quote from the user and creates an Ajax Request to the post_image.php file.
-User can also give the background color and the color of the text on the image.
-It the interprets the JSON value from the Ajax call response.
+It is the view part.\n
+It conatins the UI parts to which the user interacts.\n
+It accepts a quote from the user and creates an Ajax Request to the post_image.php file.\n
+User can also give the background color and the color of the text on the image.\n
+It the interprets the JSON value from the Ajax call response.\n
 ## post_image.php
 It is the controller part.
 It accepts the user quote and creates an image out of it by calling the StringToImage.php file.
