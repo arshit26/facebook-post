@@ -13,17 +13,19 @@ class StringToImage {
      * @param int width of the image
      * @param int height of the image
      */
-    function createImage($text, $fontSize = 20, $imgWidth = 400, $imgHeight = 400){
+    function createImage($text,$back_col,$txt_col, $fontSize = 20, $imgWidth = 400, $imgHeight = 400){
 
 		//This is the path of the font to be given to the text
         $font = 'fonts/arial.ttf';
+	    list($br, $bg, $bb) = sscanf($back_col, "#%02x%02x%02x"); // to convert the hex codes in to rgb format
+		list($tr, $tg, $tb) = sscanf($txt_col, "#%02x%02x%02x");
         $angle = 0;
         //To create a Box For the Image
         $this->img = imagecreatetruecolor($imgWidth, $imgHeight);
         //Now declaring some Colors
-        $background = imagecolorallocate($this->img, 96, 125, 139); // the color for background of quote
+        $background = imagecolorallocate($this->img, $br,$bg,$bb); // the color for background of quote
         $grey = imagecolorallocate($this->img, 128, 128, 128);
-        $txtColor = imagecolorallocate($this->img, 255,255,255);
+        $txtColor = imagecolorallocate($this->img, $tr,$tg,$tb); // the color for the text on the image
         imagefilledrectangle($this->img, 0, 0, $imgWidth - 1, $imgHeight - 1, $background);
         
         //break lines
