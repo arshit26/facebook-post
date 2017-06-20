@@ -23,4 +23,4 @@ This folder contains the Facebook SDK to use the Facebook classes.
 This folder temporarily stores the image that is created from the user quote.
 
 ## NOTE::
-For testing purposes I have deployed the code on my own server www.mydakiya.com. To deploy it on a different server just the root url has to be changed in the config.php file.
+For testing purposes I have deployed the code on my own server www.mydakiya.in To deploy it on a different server just the root url has to be changed in the config.php file.
