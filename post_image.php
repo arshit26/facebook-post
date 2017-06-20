@@ -4,14 +4,15 @@ require_once("config.php");
 require_once("fb_sdk/src/facebook.php"); // Including the Facebook Class from the Facebook SDK
 
 $quote= $_REQUEST['quote']; // getting the Quote from the ajax request
-
+$back_color =urldecode($_REQUEST['back_col']);
+$text_color =urldecode($_REQUEST['text_col']);
 // To create an Image from the user entered Text
 			//include StringToImage class
 				//create img object
 				$img = new StringToImage();
 				//create image from text
 				$text = $_REQUEST['quote'];
-				$img->createImage($text);
+				$img->createImage($text,$back_color,$text_color);
 				//display image
 				
 				$img->saveImage();
