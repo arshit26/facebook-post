@@ -1,3 +1,2 @@
 # facebook-post
-# 0000FF
-A new file
+<p style='color:red'>This is some red text.</p>
